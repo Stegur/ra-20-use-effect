@@ -1,0 +1,8 @@
+.List-container {
+    display: flex;
+}
+
+.List {
+    width: 300px;
+    margin-right: 20px;
+}
