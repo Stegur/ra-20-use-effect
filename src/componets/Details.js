@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import './List.css'
 import useFetch from '../hooks/useFetch'
 
 function Details({ info }) {
 
-    const url = 'https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/' + info.id + '.json';
+    const url = process.env.REACT_APP_USER_PROFILE + info.id + '.json';
     const [data, loading, error] = useFetch(url);
-    // const [user, setUser] = useState([])
 
 
     return (
