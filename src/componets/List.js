@@ -6,7 +6,12 @@ function List({ users, onClick }) {
     const handleClick = (event) => {
         event.preventDefault();
         onClick({ id: event.target.id, name: event.target.name });
+
+        const list = document.querySelectorAll('.list-group-item');
+        list.forEach(item => item.classList.remove('bg-primary', 'text-white'));
+        event.target.classList.add('bg-primary', 'text-white');
     }
+
 
     return (
         <div className="List list-group">
